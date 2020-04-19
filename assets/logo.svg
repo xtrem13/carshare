@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="170" height="175" viewBox="0 0 170 175">
+  <g id="Group_5" data-name="Group 5" transform="translate(-88 -33)">
+    <path id="Polygon_1" data-name="Polygon 1" d="M62,0l62,109H0Z" transform="translate(88 33)" fill="#fff"/>
+    <path id="Polygon_2" data-name="Polygon 2" d="M57,0l57,104H0Z" transform="translate(144 67)" fill="#fff"/>
+    <text id="C" transform="translate(148 110)" fill="#20afba" font-size="34" font-family="SegoeUI, Segoe UI"><tspan x="-10.525" y="0">C</tspan></text>
+    <text id="S" transform="translate(201 141)" fill="#b00ff3" font-size="29" font-family="SegoeUI, Segoe UI"><tspan x="-7.703" y="0">S</tspan></text>
+    <text id="Car_sharing" data-name="Car sharing" transform="translate(180 203)" fill="#fff" font-size="20" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-67.563" y="0">CAR SHARING</tspan></text>
+  </g>
+</svg>
