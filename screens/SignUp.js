@@ -43,7 +43,7 @@ const SignUp= (props) => {
       </View>
       <View style={styles.signUp}>
         <Text  style={styles.inline}>Have an account?</Text>
-        <TouchableOpacity onPress={()=>props.navigation.navigate("SignIn")}><Text style={styles.signUpText}> Sign in </Text></TouchableOpacity>
+        <TouchableOpacity onPress={()=>props.auth.changeReg(true)}><Text style={styles.signUpText}> Sign in </Text></TouchableOpacity>
         
       </View>
     </ScrollView>
@@ -52,7 +52,7 @@ const SignUp= (props) => {
 
 const styles = StyleSheet.create({
   root:{
-    backgroundColor:"deepskyblue",
+    backgroundColor:'#3DA2E5',
     padding:20
   },
   imgContainer:{

@@ -12,7 +12,7 @@ import logo from "../assets/carsharelogo.png"
 
 
 const SignIn = (props) => {
-  console.log(props)
+ 
   return (
     <ScrollView style={styles.root}>
       <View style={styles.imgContainer}>
@@ -27,7 +27,7 @@ const SignIn = (props) => {
         <TextInput placeholder="Password" style={styles.input}/> 
       </View>
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.signButton}>
+        <TouchableOpacity style={styles.signButton} onPress={()=>{props.auth.changeAuth(true)}}>
           <Text style={styles.signText}>Sign in</Text>
         </TouchableOpacity>
       </View>
@@ -38,7 +38,7 @@ const SignIn = (props) => {
       </View>
       <View style={styles.signUp}>
         <Text  style={styles.inline}>Don't have an account?</Text>
-        <TouchableOpacity onPress={()=>props.navigation.navigate("SignUp")}><Text style={styles.signUpText}> Sign up </Text></TouchableOpacity>
+        <TouchableOpacity onPress={()=>props.auth.changeReg(false)}><Text style={styles.signUpText}> Sign up </Text></TouchableOpacity>
         <Text style={styles.inline}> and become a member.</Text>
       </View>
     </ScrollView>
@@ -47,7 +47,7 @@ const SignIn = (props) => {
 
 const styles = StyleSheet.create({
   root:{
-    backgroundColor:"deepskyblue",
+    backgroundColor:'#3DA2E5',
     padding:20
   },
   imgContainer:{
