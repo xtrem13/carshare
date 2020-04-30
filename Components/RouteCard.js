@@ -27,7 +27,6 @@ const styles=StyleSheet.create({
 		paddingLeft:15,
 		paddingRight:15,
 		borderRadius:10
-		
 	},
 	title:{
 		color:"white",
@@ -53,7 +52,6 @@ const styles=StyleSheet.create({
 	size:{
 		color:"#fff",
 		fontSize:17
-
 	}
 })
 export default RouteCard;
