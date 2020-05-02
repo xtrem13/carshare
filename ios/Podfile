@@ -79,6 +79,8 @@ target 'carshare' do
 
   pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
 
+  pod 'react-native-maps', :path => '../node_modules/react-native-maps'
+
   target 'carshareTests' do
     inherit! :complete
     # Pods for testing

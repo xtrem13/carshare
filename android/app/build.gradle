@@ -127,7 +127,17 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
+    buildscript {
+        ext {
+             compileSdkVersion           = 28
+            targetSdkVersion            = 28
+            buildToolsVersion           = "28.0.3"
+            googlePlayServicesVersion   = "17.0.0"
+            supportLibVersion           = "27.1.0"
+            androidMapsUtilsVersion     = "0.5+"
+            minSdkVersion               = 16
+        }
+    }
     defaultConfig {
         applicationId "com.carshare"
         minSdkVersion rootProject.ext.minSdkVersion
