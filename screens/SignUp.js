@@ -23,12 +23,13 @@ const SignUp= (props) => {
       </View>
       <View>
         <TextInput placeholder="Name" style={styles.input}/>
-        <TextInput placeholder="Phone" style={styles.input}/>
-        <TextInput placeholder="Username" style={styles.input}/>
+        <TextInput placeholder="Phone : 9X YYY ZZYY" style={styles.input}/>
+        <TextInput placeholder="Licence Number" style={styles.input}/>
         <TextInput placeholder="Password" style={styles.input}/> 
-        <TextInput placeholder="Have a car?" style={styles.input}/>
-        <TextInput placeholder="Car Model" style={styles.input}/>
-        <TextInput placeholder="Car Number" style={styles.input}/>
+        <TextInput placeholder="Experience in years" style={styles.input}/> 
+        <TextInput placeholder="gender" style={styles.input}/> 
+        <TextInput placeholder="Birth date: YYYY-MM-DD" style={styles.input}/> 
+       
          
       </View>
       <View style={styles.buttonContainer}>

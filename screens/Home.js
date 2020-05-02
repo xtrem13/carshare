@@ -1,60 +1,54 @@
 import React from 'react';
-import { ScrollView, View, Text, StyleSheet, TouchableOpacity } from 'react-native'
-import routes from "./demoRoutes.js"
-import RouteCard from "../Components/RouteCard.js"
+import {  View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native'
+import bg from "../assets/wallworld.jpg"
 const Home = (props) => {
-  const routeList = routes.map((item, index) => {
-    return (
-      <TouchableOpacity onPress={() => props.navigation.navigate("Route")} key={index}>
-        <RouteCard title={item.title} id={item.groupId} size={item.groupSize} />
-      </TouchableOpacity>
-    )
-  })
+  
 
   return (
-    <>
-      <ScrollView style={{ backgroundColor: 'white', paddingLeft: 5, paddingRight: 5, paddingTop: 5 }}>
-        {routeList}
-      </ScrollView>
-      <TouchableOpacity onPress={() => props.navigation.navigate("Map")}>
-        <Text style={styles.mapBtn}>Map</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.addNew}>
-        <Text style={styles.addNewText}>+</Text>
-      </TouchableOpacity>
-    </>
+    <View style={{backgroundColor:"black",height:"100%"}}>
+      <View style={styles.card}>
+        <TouchableOpacity onPress={() => props.navigation.navigate("AllRoutes")} >
+        <Text style={styles.title}>
+          My Routes
+        </Text>
+        </TouchableOpacity>
+      </View>
+       <View style={styles.card2}>
+        <TouchableOpacity onPress={() => props.navigation.navigate("Cars")} >
+        <Text style={styles.title}>
+          My Cars
+        </Text>
+        </TouchableOpacity>
+      </View>
+      <Image source={bg} style={styles.img}/>
+    </View>
   )
 }
 const styles = StyleSheet.create({
-  title: {
-    fontSize: 40,
-    color: "red",
-    margin: 50
+  card:{
+    
+    width:"100%",
+    backgroundColor:"#243adf",
+    padding:30,
+    margin:10,
+    borderRadius:10
   },
-  addNew: {
-    position: "absolute",
-    backgroundColor: "#28a745",
-    padding: 10,
-    borderRadius: 30,
-    width: 60,
-    height: 60,
-    bottom: 40,
-    right: 40
+  card2:{
+    
+    width:"100%",
+    backgroundColor:"#237657",
+    padding:30,
+    margin:10,
+    borderRadius:10
   },
-  addNewText: {
-    color: "white",
-    fontSize: 30,
-    textAlign: "center",
-    textAlignVertical: "center",
+  title:{
+    fontSize:30,
+    color:"white"
   },
-  mapBtn:{
-		backgroundColor:"#2B80C3",
-		paddingTop:20,
-		paddingBottom:20,
-		paddingLeft:15,
-		paddingRight:15,
-		borderRadius:10
-	},
+  img:{
+    width:"100%",
+    zIndex:-1
+  }
 })
 
 export default Home;

@@ -4,11 +4,11 @@ import MapView, {Marker, PROVIDER_GOOGLE} from 'react-native-maps'
 
 const styles = StyleSheet.create({
  container: {
-   ...StyleSheet.absoluteFillObject,
+   // ...StyleSheet.absoluteFillObject,
    height: 400,
    width: 400,
    justifyContent: 'flex-end',
-   alignItems: 'center',
+   // alignItems: 'center',
  },
  map: {
    ...StyleSheet.absoluteFillObject,
@@ -16,10 +16,8 @@ const styles = StyleSheet.create({
 });
 
 class Map extends Component {
-	state={x:{
-		latitude: 40.902190,
-  		longitude: 69.355313
-  	}}
+
+	  
     render() {
         return (
             <View style={styles.container}>
@@ -35,8 +33,8 @@ class Map extends Component {
 
                 >
                 <Marker draggable
-				    coordinate={this.state.x}
-				    onDragEnd={(e) => this.setState({ x: e.nativeEvent.coordinate })}
+				    coordinate={this.props.coords}
+				    onDragEnd={(e) => this.props.change(e.nativeEvent.coordinate )}
 				  />
   	</MapView>
             </View>
